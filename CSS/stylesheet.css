@@ -1,4 +1,19 @@
+header{
+    background-color: black;
+}
+
+body{
+    background-color: gray;
+}
+
+footer{
+    background-color: beige;
+}
+
 h1{
     font-size: 50px;
-    text-align: center;
+    color: #C0C0C0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
