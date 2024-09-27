@@ -5,7 +5,7 @@
 }  
 
 header{
-    padding: 5px.0px;
+    padding: 5px 10px;
     background-color: black;
 }
 
@@ -16,13 +16,20 @@ body{
 
 footer{
     background-color: beige;
-    padding: 1px;
 }
 
-h1{
+.title{
     font-size: 50px;
     color: #C0C0C0;
     text-align: center;
+}
+
+.Xlink{
+    margin:10px;
+}
+
+.Instalink{
+    margin:10px;
 }
 
 /* Loading */
