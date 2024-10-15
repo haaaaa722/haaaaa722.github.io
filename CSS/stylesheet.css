@@ -33,9 +33,11 @@ footer{
 .Xlink{
     margin:10px;
     width: 5%;
+    min-width: 50px;
 }
 
 .Instalink{
     margin:10px;
     width: 5%;
+    min-width: 50px;
 }
