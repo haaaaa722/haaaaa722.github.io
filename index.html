@@ -15,8 +15,29 @@
         <a href="index.html" class="title">はっ！</a>
     </header>
     <main>
-        <a href="/activity.html">開発</a>
-        <a href="/photo.html"><br>写真</a>
+        <!-- アコーディオンメニュー -->
+        <div class="ac_menu">
+            <!-- 開発 -->
+            <label for="ac_menu_dev">開発</label>
+            <input type="radio" name="radio" id="ac_menu_dev" class="accordion">
+            <ul id="dev_list">
+                <li><a href="development.html">全て</a></li>
+                <li><a href="Chrome.html">Chrome拡張機能</a></li>
+                <li><a href="Android.html">Androidアプリ開発</a></li>
+                <li><a href="iOS.html">iOSアプリ開発</a></li>
+            </ul>
+            <!-- 写真 -->
+            <label for="ac_menu_photo">写真</label>
+            <input type="radio" name="radio" id="ac_menu_photo" class="accordion">
+            <ul id="photo_list">
+                <li>1枚目</li>
+                <li>2枚目</li>
+                <li>3枚目</li>
+                <li>4枚目</li>
+                <li>5枚目</li>
+                <li><a href="photo.html">全て見る</a></li>
+            </ul>
+        </div>
     </main>
     <footer>
         <a href="https://x.com/haaa_o_olll" target="_blank"><img src="/images/icons8-twitterx.svg" class="Xlink"></a>
