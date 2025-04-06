@@ -5,14 +5,88 @@
     font-style: normal;
 }  
 
+/* setting */
+:root{
+    color-scheme: light dark;
+}
+
 /* スマホ */
+/* All */
+body{
+    font-family: "Zen Kurenaido", sans-serif;
+    background-color: light-dark(lightgray,#282828);
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    background-color: light-dark(gray,black);
+}
+
+.title{
+    font-size: 50px;
+    color: light-dark(#282828,lightgray);
+    text-decoration: none;
+}
+
+/* body */
+/* 確認用 */
+.phone{
+    color: light-dark(#282828,lightgray)
+}
+
+.tablet{
+    color: light-dark(lightgray,#282828);
+}
+
+.pc{
+    color: light-dark(lightgray,#282828);
+}
+
+
 
 /* タブレット */
 @media (min-width:768px){
+    /* All */
 
+    /* header */
+
+    /* body */
+    /* 確認用 */
+    .phone{
+        color: light-dark(lightgray,#282828);
+    }
+
+    .tablet{
+        color: light-dark(#282828,lightgray);
+    }
+
+    .pc{
+        color: light-dark(lightgray,#282828);
+    }
 }
+
+
+
+
 
 /* PC */
 @media (min-width:1024px){
+    /* All */
 
+    /* header */
+
+    /* body */
+    /* 確認用 */
+    .phone{
+        color: light-dark(lightgray,#282828)
+    }
+
+    .tablet{
+        color: light-dark(lightgray,#282828);
+    }
+
+    .pc{
+        color: light-dark(#282828,lightgray);
+    }
 }
