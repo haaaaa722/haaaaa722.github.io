@@ -8,6 +8,15 @@
 /* setting */
 :root{
     color-scheme: light dark;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-boxS;
+}
+a,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* スマホ */
@@ -27,6 +36,50 @@ header{
     font-size: 5vw;
     color: light-dark(#282828,lightgray);
     text-decoration: none;
+}
+
+.ham_menu{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+/* menuコンテンツ */
+.ham_menu .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    outline: 1px solid transparent;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.ham_menu .menu > div{
+    display: flex;
+    overflow: hidden;
+    width: 200vw;
+    height: 200vw;
+    transition: all 0.4s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    text-align: center;
+    color: #fefefe;
+    border-radius: 50%;
+    background: rgba(0,131,143,0.8);
+
+    flex: none;
+    -webkit-backface-visibility: hedden;
+    backface-visibility: center;
 }
 
 /* body */
