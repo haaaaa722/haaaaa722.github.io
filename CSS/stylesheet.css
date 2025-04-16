@@ -24,7 +24,7 @@ header{
 }
 
 .title{
-    font-size: 50px;
+    font-size: 5vw;
     color: light-dark(#282828,lightgray);
     text-decoration: none;
 }
@@ -46,7 +46,7 @@ header{
 
 
 /* タブレット */
-@media (min-width:768px){
+@media (min-width:481px){
     /* All */
 
     /* header */
@@ -71,7 +71,7 @@ header{
 
 
 /* PC */
-@media (min-width:1024px){
+@media (min-width:1025px){
     /* All */
 
     /* header */
