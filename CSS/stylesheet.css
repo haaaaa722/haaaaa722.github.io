@@ -9,7 +9,7 @@
 :root{
     color-scheme: light dark;
     -webkit-box-sizing: border-box;
-    box-sizing: border-boxS;
+    box-sizing: border-box;
 }
 a,
 a:visited,
@@ -30,12 +30,18 @@ body{
 /* header */
 header{
     background-color: light-dark(gray,black);
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
 }
 
 .title{
-    font-size: 5vw;
+    font-size: 8vw;
+    line-height: 1;
     color: light-dark(#282828,lightgray);
     text-decoration: none;
+    align-items: center;
 }
 
 .ham_menu{
@@ -43,13 +49,14 @@ header{
     z-index: 1;
     top: 0;
     right: 0;
+    height: 8vw;
 }
 
 /* menuコンテンツ */
 .ham_menu .menu{
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     display: flex;
     visibility: hidden;
     overflow: hidden;
@@ -67,19 +74,178 @@ header{
 .ham_menu .menu > div{
     display: flex;
     overflow: hidden;
-    width: 200vw;
-    height: 200vw;
+    width: 300vh;
+    height: 300vh;
     transition: all 0.4s ease;
     -webkit-transform: scale(0);
     transform: scale(0);
     text-align: center;
-    color: #fefefe;
+    color: light-dark(#282828,lightgray);
     border-radius: 50%;
-    background: rgba(0,131,143,0.8);
+    background: light-dark(rgba(0,131,143,0.8),rgba(0, 100, 108, 0.5));
 
     flex: none;
-    -webkit-backface-visibility: hedden;
-    backface-visibility: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.ham_menu .menu > div > ul{
+    display: block;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0 1em;
+    list-style: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.ham_menu .menu > div > ul > li{
+    font-size: 3vh;
+    display: block;
+    margin: 1em;
+    padding: 0;
+}
+
+.ham_menu .menu > div > ul > li > a{
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.ham_menu .menu > div > ul > li > a:hover{
+    color: light-dark(black,#e5e5e5);
+}
+
+.ham_menu .menu > div > ul > li > a:hover:after{
+    width: 100%;
+}
+
+.ham_menu .menu > div > ul > li > a:after{
+    position: absolute;
+    z-index: 1;
+    bottom: -0.15em;
+    right: 0;
+    width: 0;
+    height: 2px;
+    content: '';
+    transition: width 0.4s ease;
+    background: light-dark(black,#e5e5e5);
+}
+
+/* クリックしたらメニューが開閉の動作 */
+.ham_menu .toggle{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.ham_menu .toggle:checked + .hamburger > span{
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.ham_menu .toggle:checked + .hamburger > span:before,
+.ham_menu .toggle:checked + .hamburger > span:after{
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.ham_menu .toggle:checked + .hamburger > span:after{
+    opacity: 0;
+}
+
+.ham_menu .toggle:checked ~ .menu{
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.ham_menu .toggle:checked ~ .menu > div{
+    transition-duration: 0.75s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.ham_menu .toggle:checked ~ .menu > div > ul{
+    opacity: 1;
+}
+
+.ham_menu .toggle:checked ~ .menu > div > ul li:nth-of-type(1){
+    transition-delay: 0.4s;
+}
+
+.ham_menu .toggle:checked ~ .menu > div > ul li:nth-of-type(2){
+    transition-delay: 0.6s;
+}
+
+.ham_menu .toggle:checked ~ .menu > div > ul li:nth-of-type(3){
+    transition-delay: 0.8s;
+}
+
+.ham_menu .toggle:checked ~ .menu > div > ul li:nth-of-type(4){
+    transition-delay: 1.0s;
+}
+
+.ham_menu .toggle:hover + .hamburger{
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.ham_menu .toggle:checked:hover + .hamburger > span{
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+/* ハンバーガー */
+.ham_menu .hamburger{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease;
+    border-radius: 0 0.12em 0.12em 0;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ham_menu .hamburger > span{
+    position: relative;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease;
+    background: light-dark(#282828,lightgray);
+}
+
+.ham_menu .hamburger > span:before,
+.ham_menu .hamburger > span:after{
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    transition: all 0.4s ease;
+    background: inherit;
+}
+
+.ham_menu .hamburger > span:after{
+    top: 10px;
 }
 
 /* body */
