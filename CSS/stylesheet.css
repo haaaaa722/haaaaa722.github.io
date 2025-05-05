@@ -31,14 +31,14 @@ body{
 header{
     position: relative;
     background-color: light-dark(#dbdbdb,#070707);
-    height: 10vw;
+    height: min(10vw,100px);
     display: flex;
     align-items: center;
     padding: 0 1em;
 }
 
 .title{
-    font-size: 8vw;
+    font-size: min(8vw,80px);
     line-height: 1;
     color: light-dark(#101010,#f0f0f0);
     text-decoration: none;
