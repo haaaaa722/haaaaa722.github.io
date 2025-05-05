@@ -23,14 +23,14 @@ a:active{
 /* All */
 body{
     font-family: "Zen Kurenaido", sans-serif;
-    background-color: light-dark(lightgray,#282828);
+    background-color: light-dark(#f0f0f0,#101010);
     margin: 0 auto;
 }
 
 /* header */
 header{
     position: relative;
-    background-color: light-dark(gray,black);
+    background-color: light-dark(#dbdbdb,#070707);
     height: 10vw;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ header{
 .title{
     font-size: 8vw;
     line-height: 1;
-    color: light-dark(#282828,lightgray);
+    color: light-dark(#101010,#f0f0f0);
     text-decoration: none;
     align-items: center;
 }
@@ -82,9 +82,9 @@ header{
     -webkit-transform: scale(0);
     transform: scale(0);
     text-align: center;
-    color: light-dark(#282828,lightgray);
+    color: light-dark(#101010,#f0f0f0);
     border-radius: 50%;
-    background: light-dark(rgba(0,131,143,0.8),rgba(0, 100, 108, 0.5));
+    background: light-dark(#dbdbdb,#070707);
 
     flex: none;
     -webkit-backface-visibility: hidden;
@@ -118,7 +118,7 @@ header{
 }
 
 .ham_menu .menu > div > ul > li > a:hover{
-    color: light-dark(black,#e5e5e5);
+    color: light-dark(#101010,#f0f0f0);
 }
 
 .ham_menu .menu > div > ul > li > a:hover:after{
@@ -134,7 +134,7 @@ header{
     height: 2px;
     content: '';
     transition: width 0.4s ease;
-    background: light-dark(black,#e5e5e5);
+    background: light-dark(#101010,#f0f0f0);
 }
 
 /* クリックしたらメニューが開閉の動作 */
@@ -231,7 +231,7 @@ header{
     width: 50%;
     height: 2px;
     transition: all 0.4s ease;
-    background: light-dark(#282828,lightgray);
+    background: light-dark(#101010,#f0f0f0);
     transform: translateY(-50%);
 }
 
@@ -257,15 +257,15 @@ header{
 /* body */
 /* 確認用 */
 .phone{
-    color: light-dark(#282828,lightgray)
+    color: light-dark(#101010,#f0f0f0);
 }
 
 .tablet{
-    color: light-dark(lightgray,#282828);
+    color: light-dark(#f0f0f0,#101010);
 }
 
 .pc{
-    color: light-dark(lightgray,#282828);
+    color: light-dark(#f0f0f0,#101010);
 }
 
 
@@ -279,15 +279,15 @@ header{
     /* body */
     /* 確認用 */
     .phone{
-        color: light-dark(lightgray,#282828);
+        color: light-dark(#f0f0f0,#101010);
     }
 
     .tablet{
-        color: light-dark(#282828,lightgray);
+        color: light-dark(#101010,#f0f0f0);
     }
 
     .pc{
-        color: light-dark(lightgray,#282828);
+        color: light-dark(#f0f0f0,#101010);
     }
 }
 
@@ -304,14 +304,14 @@ header{
     /* body */
     /* 確認用 */
     .phone{
-        color: light-dark(lightgray,#282828)
+        color: light-dark(#f0f0f0,#101010);
     }
 
     .tablet{
-        color: light-dark(lightgray,#282828);
+        color: light-dark(#f0f0f0,#101010);
     }
 
     .pc{
-        color: light-dark(#282828,lightgray);
+        color: light-dark(#101010,#f0f0f0);
     }
 }
