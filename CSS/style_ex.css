@@ -11,34 +11,131 @@
 }
 
 *{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* スマホ */
+/* ALL */
 body{
-    font-family: "Zen Kurenaido", sans-serif;
+    font-family: "Zen Kurenaido",sans-serif;
     background-color: light-dark(#f0f0f0,#101010);
-    margin: 0 auto;
-}
-/* header */
-header{
-    height: 7vh;
-    background-color: light-dark(#dbdbdb,#070707);
+    margin: 0;
 }
 
-header a{
-    text-decoration: none;
+/* header */
+header{
+    position: relative;
+    background-color: light-dark(#dbdbdb,#070707);
+    height: min(10vw,100px);
+    display: flex;
+    align-items: center;
+    padding:0 1em
+}
+
+.title{
+    font-size: min(8vw,80px);
     color: light-dark(#101010,#f0f0f0);
 }
 
-#hamburger{
-    position:fixed;
+.ham_menu{
+    position: fixed;
+    z-index: 1;
     right: 0;
-    color: lightdark(#101010,#f0f0f0)
+    margin-right: 1vw;
 }
 
-.menu{
-    display:none;
+/* menuコンテンツ */
+
+.ham_menu .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    outline: 1px solid transparent;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ham_menu .menu > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    color: light-dark(#101010,#f0f0f0);
+    background: light-dark(#dbdbdb,#070707);
+    align-items: center;
+    justify-content: center;
+}
+
+.ham_menu .menu > div > ul{
+    display: block;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0 1em;
+    list-style: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.ham_menu .menu > div > ul > li{
+    font-size: 3vh;
+    display: block;
+    margin: 1em;
+    padding: 0;
+}
+
+.ham_menu .menu > div > ul > li > a{
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.ham_menu .menu > div > ul > li > a:hover{
+    color: light-dark(#101010,#f0f0f0);
+}
+
+.ham_menu .menu > div > ul > li > a:hover:after{
+    width: 100%;
+}
+
+.ham_menu .menu > div > ul > li > a:after{
+    position: absolute;
+    z-index: 1;
+    bottom: -0.15em;
+    right: 0;
+    width: 0;
+    height: 2px;
+    content: '';
+    transition: width 0.4s ease;
+    background: light-dark(#101010,#f0f0f0);
+}
+
+/* クリックしたらメニューが開閉の動作 */
+.ham_menu .toggle{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    opacity: 0;
 }
 
 /* main */
