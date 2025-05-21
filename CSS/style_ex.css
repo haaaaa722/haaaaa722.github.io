@@ -1,0 +1,108 @@
+/* フォント */
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+/* setting */
+:root{
+    color-scheme: light dark;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* スマホ */
+body{
+    font-family: "Zen Kurenaido", sans-serif;
+    background-color: light-dark(#f0f0f0,#101010);
+    margin: 0 auto;
+}
+/* header */
+header{
+    height: 7vh;
+    background-color: light-dark(#dbdbdb,#070707);
+}
+
+header a{
+    text-decoration: none;
+    color: light-dark(#101010,#f0f0f0);
+}
+
+#hamburger{
+    position:fixed;
+    right: 0;
+    color: lightdark(#101010,#f0f0f0)
+}
+
+.menu{
+    display:none;
+}
+
+/* main */
+
+/* footer */
+
+
+
+/* 確認用 */
+.phone{
+    display: block;
+}
+
+.tablet{
+    display: none;
+}
+
+.pc{
+    display: none;
+}
+
+/* タブレット */
+@media(min-width:481px){
+    /* header */
+    #hamburger{
+        display: none;
+    }
+
+    /* main */
+
+    /* footer */
+
+    /* 確認用 */
+    .phone{
+        display: none;
+    }
+
+    .tablet{
+        display: block;
+    }
+
+    .pc{
+        display: none;
+    }
+}
+
+/* PC */
+@media(min-width:1025px){
+    /* header */
+
+    /* main */
+
+    /* footer */
+
+    /* 確認用 */
+    .phone{
+        display: none;
+    }
+
+    .tablet{
+        display: none;
+    }
+
+    .pc{
+        display: block;
+    }
+}
