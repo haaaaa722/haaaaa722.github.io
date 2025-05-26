@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 class Ex extends Component {
     constructor(props) {
@@ -21,4 +22,4 @@ class Ex extends Component {
     }
 }
 
-export default Ex;
+ReactDOM.render(<Ex/>,document.getElementById("hamburger"))

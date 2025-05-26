@@ -46,9 +46,10 @@ header{
 }
 
 .btn_open{
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: 8vw;
     color: light-dark(#101010,#f0f0f0);
+    background-color: red;
 }
 
 /* main */
