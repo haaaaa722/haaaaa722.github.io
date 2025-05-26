@@ -46,10 +46,13 @@ header{
 }
 
 .btn_open{
+    position: fixed;
     width: 8vw;
     height: 8vw;
     color: light-dark(#101010,#f0f0f0);
     background-color: red;
+    top: 0;
+    right: 0;
 }
 
 /* main */
