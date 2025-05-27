@@ -8,7 +8,7 @@ const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
 class Ex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {menu:"opne"};
+        this.state = {menu:"open"};
     }
     render() { 
         return(
@@ -26,4 +26,4 @@ class Ex extends React.Component {
     }
 }
 
-ReactDOM.render(<Ex/>,document.getElementById("hamburger"));
+ReactDOM.creactRoot(document.getElementById("hamburger")).render(<Ex/>)
