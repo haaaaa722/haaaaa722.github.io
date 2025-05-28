@@ -1,15 +1,14 @@
-import "./App.css";
 import React from "react";
-import ReactDom from "react-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
 
-class App extends React.Component {
-  render() { 
-    return (
-      <div>
-        <p>a</p>
-      </div>
-    );
-  }
-}
+
+const App = ()=>{
+  return(
+    <div>
+      <Header />
+    </div>
+  );
+};
 
 export default App;

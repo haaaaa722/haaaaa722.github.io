@@ -1,0 +1,5 @@
+header{
+    display: flex;
+    height: 10vh;
+    border-bottom: 1px solid white;
+}

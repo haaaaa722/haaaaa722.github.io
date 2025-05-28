@@ -17,6 +17,6 @@
 
 body{
   font-family:"Zen Kurenaido",sans-serif;
-  background-color: light-dark(white,black);
-  color: light-dark(black,white);
+  background-color: light-dark(#f1f1f2,#1e1e20);
+  color: light-dark(#1e1e20,#f1f1f2);
 }

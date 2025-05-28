@@ -1,0 +1,58 @@
+.nav-mobile{
+    position: relative;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    width: 8vh;
+    height: 8vh;
+    justify-content: space-between;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    height: 3px;
+    background-color: light-dark(#1e1e20,#f1f1f2);
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(6px,-6px);
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: light-dark(#f1f1f2,#1e1e20);
+    list-style: none;
+    padding: 10px;
+    border: 1px solid light-dark(#1e1e20,#f1f1f2);
+    border-radius: 4px;
+}
+
+.menu.show{
+    display: block;
+}
+
+.menu li{
+    margin: 8px 0;
+}
+
+.menu a{
+    text-decoration: none;
+    color: light-dark(#1e1e20,#f1f1f2);
+}
