@@ -10,9 +10,9 @@
 }
 
 .menu-icon{
-    height: 8vh;
-    width: 8vh;
-    margin: 1vh;
+    height: 6vh;
+    width: 6vh;
+    margin: 2vh;
     color: light-dark(#1e1e20,#f1f1f2);
 }
 
@@ -43,11 +43,21 @@
 }
 
 .mobile-menu-items li{
-    margin: 20px 0;
+    margin: 2vh 0;
 }
 
 .mobile-menu-items li a{
     color: light-dark(#1e1e20,#f1f1f2);
-    font-size: 24px;
+    font-size: 4vh;
     text-decoration: none;
+}
+
+.mobile-menu-items li a:hover{
+    color: #375e97;
+    border-bottom: 2px solid #375e97;
+}
+
+.mobile-items-icon{
+    margin-right: 5vw;
+    color: inherit;
 }

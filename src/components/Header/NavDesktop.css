@@ -1,0 +1,31 @@
+.desktop-menu-overlay{
+    position: relative;
+}
+
+.desktop-menu-items{
+    position: fixed;
+    display: flex;
+    right: 0;
+    line-height: 10vh;
+    list-style: none;
+    font-size: 4vh;
+}
+
+.desktop-menu-items li{
+    transition: all 0.5s;
+}
+
+.desktop-menu-items li a{
+    text-decoration: none;
+    color: light-dark(#1e1e20,#f1f1f2);
+    padding: 2vh 2vw;
+}
+
+.desktop-menu-items li a:hover{
+    color: #375e97;
+}
+
+.desktop-items-icon{
+    margin-right: 1vw;
+    color: inherit;
+}

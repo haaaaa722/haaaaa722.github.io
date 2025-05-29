@@ -1,11 +1,18 @@
+import { Link } from "react-router-dom";
+import { faHouse, faCode, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./NavDesktop.css";
+
 const NavDesktop = ()=>{
     return(
         <nav className='nav-desktop'>
-            <ul>
-                <li>Home</li>
-                <li>Develop</li>
-                <li>Photos</li>
-            </ul>
+            <div className="desktop-menu-overlay">
+                <ul className="desktop-menu-items">
+                    <li><Link to="/"><FontAwesomeIcon icon={faHouse} className="desktop-items-icon"/>Home</Link></li>
+                    <li><Link to="/Develop"><FontAwesomeIcon icon={faCode} className="desktop-items-icon"/>Develop</Link></li>
+                    <li><Link to="/Photos"><FontAwesomeIcon icon={faCamera} className="desktop-items-icon"/>Photos</Link></li>
+                </ul>
+            </div>
         </nav>
     );
 };

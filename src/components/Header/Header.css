@@ -10,9 +10,5 @@ header{
     color: light-dark(#1e1e20,#f1f1f2);
     font-size: 6vh;
     line-height: 10vh;
-}
-
-.nav-tablet{
-    position: absolute;
-    top: 10vh;
+    padding: 0 2vw;
 }

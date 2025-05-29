@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import "./NavMobile.css";
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faHouse, faCode, faCamera } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
@@ -17,9 +17,9 @@ const toggleMenu = ()=> setIsOpen(!isOpen);
 
             <div className={`mobile-menu-overlay ${isOpen ? "show" : ""}`}>
                 <ul className="mobile-menu-items">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/Develop">Develop</Link></li>
-                    <li><Link to="/Photos">Photos</Link></li>
+                    <li><Link to="/"><FontAwesomeIcon icon={faHouse} className='mobile-items-icon'/>Home</Link></li>
+                    <li><Link to="/Develop"><FontAwesomeIcon icon={faCode} className='mobile-items-icon'/>Develop</Link></li>
+                    <li><Link to="/Photos"><FontAwesomeIcon icon={faCamera} className='mobile-items-icon'/>Photos</Link></li>
                 </ul>
             </div>
 
