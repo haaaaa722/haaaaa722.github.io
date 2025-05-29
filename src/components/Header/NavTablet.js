@@ -4,9 +4,9 @@ const NavTablet = ()=>{
     return(
         <nav className='nav-tablet'>
             <ul>
-                <li>Home</li>
-                <li>Develop</li>
-                <li>Photos</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Develop</a></li>
+                <li><a href="#">Photos</a></li>
             </ul>
         </nav>
     );

@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import "./NavMobile.css";
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavMobile = ()=>{
 const [isOpen,setIsOpen] = useState(false);
@@ -8,17 +10,18 @@ const toggleMenu = ()=> setIsOpen(!isOpen);
 
     return(
         <nav className="nav-mobile">
-            <button className={`hamburger${isOpen ? "active" : ""}`} onClick={toggleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
+            <button className="menu-btn" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className='menu-icon'/>
             </button>
 
-            <ul className={`menu${isOpen ? "show" : ""}`}>
-                <li><a href='#'>Home</a></li>
-                <li><a href="#">Develop</a></li>
-                <li><a href="#">Photos</a></li>
-            </ul>
+            <div className={`menu-overlay ${isOpen ? "show" : ""}`}>
+                <ul className="menu-items">
+                    <li><a href='#'>Home</a></li>
+                    <li><a href="#">Develop</a></li>
+                    <li><a href="#">Photos</a></li>
+                </ul>
+            </div>
+
         </nav>
     );
 };

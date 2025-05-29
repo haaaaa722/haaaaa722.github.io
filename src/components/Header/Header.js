@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import "./Header.css";
 import NavMobile from './NavMobile';
 import NavTablet from './NavTablet';
@@ -27,7 +28,7 @@ const Header = ()=>{
 
     return(
         <header>
-            <div className='logo'>MySite</div>
+            <Link to="/" className='title'>はっ！</Link>
             {renderNav()}
         </header>
     );
