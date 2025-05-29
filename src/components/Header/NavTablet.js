@@ -1,13 +1,16 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import "./NavTavlet.css";
 
 const NavTablet = ()=>{
     return(
         <nav className='nav-tablet'>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Develop</a></li>
-                <li><a href="#">Photos</a></li>
-            </ul>
+            <div className="tablet-menu-overlay">
+                <ul className="tablet-menu-items">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/Develop">Develop</Link></li>
+                    <li><Link to="/Photos">Photos</Link></li>
+                </ul>
+            </div>
         </nav>
     );
 };

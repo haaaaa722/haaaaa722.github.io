@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NavDesktop = ()=>{
     return(
         <nav className='nav-desktop'>

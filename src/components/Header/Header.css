@@ -11,3 +11,8 @@ header{
     font-size: 6vh;
     line-height: 10vh;
 }
+
+.nav-tablet{
+    position: absolute;
+    top: 10vh;
+}
