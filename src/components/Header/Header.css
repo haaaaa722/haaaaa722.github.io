@@ -1,7 +1,7 @@
 header{
     position: relative;
     display: flex;
-    height: 10vh;
+    height: 8vh;
     border-bottom: 1px solid light-dark(#1e1e20,#f1f1f2);
 }
 
@@ -9,6 +9,6 @@ header{
     text-decoration: none;
     color: light-dark(#1e1e20,#f1f1f2);
     font-size: 6vh;
-    line-height: 10vh;
-    padding: 0 2vw;
+    line-height: 8vh;
+    padding: 0 1vw;
 }

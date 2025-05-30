@@ -10,9 +10,9 @@
 }
 
 .menu-icon{
-    height: 6vh;
-    width: 6vh;
-    margin: 2vh;
+    height: 5vh;
+    width: 5vh;
+    margin: 1.5vh;
     color: light-dark(#1e1e20,#f1f1f2);
 }
 
