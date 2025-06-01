@@ -1,0 +1,77 @@
+footer{
+    position: fixed;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    background: light-dark(#f1f1f2,#1e1e20);
+    bottom: 0;
+    border-top: 1px solid light-dark(#1e1e20,#f1f1f2);
+    align-items: center;
+}
+
+.footer-link{
+    display: flex;
+    list-style: none;
+}
+
+.footer-links-icon{
+    font-size: 3vh;
+    color: light-dark(#1e1e20,#f1f1f2);
+    padding: 1vh;
+}
+
+.mode{
+    position: fixed;
+    right: 2vw;
+    cursor: pointer;
+    width: 14vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: none;
+    box-shadow: 1px 1px 1px 1px light-dark(gray,black) inset;
+}
+
+.mode.light{
+    transition: all 0.5s ease;
+    background-color: #bbc3c6;
+}
+
+.mode.light svg{
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-top: 10%;
+    margin-left: 45%;
+    transition: all 0.5s;
+}
+
+.mode::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    background: #f9f9ff;
+    border-radius: 50%;
+    top: 15%;
+    left: 7%;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.mode.dark{
+    transition: all 0.5s ease;
+    background-color: #2a3132;
+}
+
+.mode.dark::before{
+    margin-left: 50%;
+    background: #b7b8b6;
+}
+
+.mode.dark svg{
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-top: 10%;
+    margin-right: 45%;
+    transition: all 0.5s;
+}
