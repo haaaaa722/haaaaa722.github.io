@@ -1,5 +1,8 @@
 /* mobile first */
 /* all */
+main{
+    height: 87vh;
+}
 
 /* tablet */
 @media (min-width:768px){

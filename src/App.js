@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile"
 import Works from "./pages/Works";
-import Photos from "./pages/Photos";
+import Photos from "./pages/Photos/Photos";
 
 const App = () => {
   const LodaingBarRef = useRef(null);
@@ -68,12 +68,14 @@ const App = () => {
     <>
       <LoadingBar color="#375e97" ref={LodaingBarRef} height={4} shadow={true} />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Profile" element={<Profile />} />
-        <Route path="/Works" element={<Works />} />
-        <Route path="/Photos" element={<Photos />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Profile" element={<Profile />} />
+          <Route path="/Works" element={<Works />} />
+          <Route path="/Photos" element={<Photos />} />
+        </Routes>
+      </main>
       <Footer toggleMode={toggleMode} mode={mode}/>
     </>
   );

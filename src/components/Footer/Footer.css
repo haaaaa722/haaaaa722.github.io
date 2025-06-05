@@ -4,9 +4,13 @@ footer{
     height: 5vh;
     width: 100%;
     background: light-dark(#f1f1f2,#1e1e20);
-    bottom: 0;
     border-top: 1px solid light-dark(#1e1e20,#f1f1f2);
     align-items: center;
+}
+
+.footer-link-wrapper{
+    position: fixed;
+    left: 1vw;
 }
 
 .footer-link{
@@ -22,9 +26,9 @@ footer{
 
 .mode{
     position: fixed;
-    right: 2vw;
+    right: 3vw;
     cursor: pointer;
-    width: 14vw;
+    width: 8vh;
     height: 4vh;
     border-radius: 2vh;
     border: none;
