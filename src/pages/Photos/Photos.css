@@ -1,0 +1,44 @@
+.category-wrapper{
+    display: flex;
+    height: 27vh;
+    background: gray;
+    align-items: center;
+    color: light-dark(#1e1e20,#f1f1f2);
+}
+
+.category-wrapper h1{
+    position: fixed;
+    font-size: 4vh;
+    left: 0;
+    padding-left: 10vw;
+}
+
+.category-wrapper p{
+    font-size: 3vh;
+}
+
+.Photos nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    right: 10vw;
+}
+
+.category{
+    list-style: none;
+    padding-left: 5vw;
+}
+
+.category li{
+    height: 2vh;
+}
+
+.category li button{
+    background: none;
+    border: none;
+    font-family: "Zen Kurenaido";
+    font-weight: 400;
+    font-size: 2vh;
+    height: 2vh;
+    line-height: 2vh;
+}
