@@ -1,9 +1,9 @@
 .category-wrapper{
     display: flex;
     height: 27vh;
-    background: gray;
     align-items: center;
     color: light-dark(#1e1e20,#f1f1f2);
+    background: gray;
 }
 
 .category-wrapper h1{
@@ -31,6 +31,7 @@
 
 .category li{
     height: 2vh;
+    margin: 5px 0;
 }
 
 .category li button{
@@ -41,4 +42,38 @@
     font-size: 2vh;
     height: 2vh;
     line-height: 2vh;
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.category-btn{
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, light-dark(#1e1e20,#f1f1f2) 50%,#375e97 50%);
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
+}
+
+.category-btn:hover{
+    background-position: right;
+}
+
+.category-btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #375e97;
+    transition: width 0.3s;
+}
+
+.category-btn:hover::after{
+    width: 100%;
 }
