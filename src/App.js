@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile"
 import Works from "./pages/Works";
 import Photos from "./pages/Photos/Photos";
+import CategoryPage from "./pages/Photos/CategoryPage";
 
 const App = () => {
   const LodaingBarRef = useRef(null);
@@ -74,6 +75,7 @@ const App = () => {
           <Route path="Profile" element={<Profile />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Photos" element={<Photos />} />
+          <Route path="/Photos/:categoryName" element={<CategoryPage/>} />
         </Routes>
       </main>
       <Footer toggleMode={toggleMode} mode={mode}/>
