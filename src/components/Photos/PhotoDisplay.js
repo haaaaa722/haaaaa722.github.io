@@ -1,34 +1,39 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, use} from "react";
+import useResponsiveColumns from "./useResponsiveColumns";
+import Pagination from "./Pagination";
+import PhotoModal from "./PhotoModal";
 import "./PhotoDisplay.css";
 
 const PhotoDisplay = ({ photos })=>{
-    const [columns, setColumns] = useState(1);
+    const columns = useResponsiveColumns();
+    const rows = 3;
+    const itemsPerPage = columns * rows;
+    const [currentPage, setCurrentPage] = useState(0);
+    const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-    useEffect(()=>{
-        const updateColumns = ()=>{
-            const width = window.innerWidth;
-            if(width >= 1024){
-                setColumns(8);
-            }else if (width >= 768){
-                setColumns(5);
-            }else{
-                setColumns(3);
-            }
-        };
+    const sortedPhotos = [...photos].sort((a,b)=>{
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB - dateA;
+    });
 
-        updateColumns();
-
-        window.addEventListener("resize",updateColumns);
-        return ()=> window.removeEventListener("resize",updateColumns);
-    },[]);
+    const startIdx = currentPage * itemsPerPage;
+    const curretPhotos = sortedPhotos.slice(startIdx, startIdx + itemsPerPage);
+    const totalPages = Math.ceil(photos.length / itemsPerPage);
 
     return(
-        <div className="PhotoDisplay" style={{display:"grid",gridTemplateColumns:`repeat(${columns},1fr)`,gap:"10px",}}>
-            {photos.map((photo) => (
-                <img key={photo.id} src={photo.url} alt="" style={{width:"100%",height:"auto",objectFit:"cover"}}/>
-            ))}
+        <div className="photo-display-wrapper">
+            <div className="photo-grid" style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
+                {curretPhotos.map((photo,index)=>(
+                    <img key={index} src={photo.src} alt={photo.title || "photo"} onClick={()=>setSelectedPhoto(photo)} className="photo-item"/>
+                ))}
+            </div>
+
+            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage}/>
+
+            <PhotoModal photo={selectedPhoto} onClose={()=>setSelectedPhoto(null)}/>
         </div>
-    );
+    )
 };
 
 export default PhotoDisplay;

@@ -3,7 +3,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background: gray;
 }
 
 .category-wrapper h1{
@@ -11,6 +10,11 @@
     font-size: 4vh;
     left: 0;
     padding-left: 10vw;
+}
+
+.category-wrapper h1 a{
+    color: light-dark(#1e1e20,#f1f1f2);
+    text-decoration: none;
 }
 
 .category-wrapper p{

@@ -1,3 +1,20 @@
-body{
-    background: slategray;
+.photo-display-wrapper{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo-grid{
+    display: grid;
+    gap: 1vw;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.photo-item{
+    width: 100%;
+    height: calc((60vh - 3vh)/3);
+    cursor: pointer;
+    object-fit: cover;
 }
