@@ -1,7 +1,9 @@
-.pagination{
+.Pagination{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 2vh;
     gap: 1rem;
     padding: 1vh;
 }

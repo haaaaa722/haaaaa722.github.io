@@ -11,21 +11,25 @@ const PhotoDisplay = ({ photos })=>{
     const [currentPage, setCurrentPage] = useState(0);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-    const sortedPhotos = [...photos].sort((a,b)=>{
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        return dateB - dateA;
-    });
-
     const startIdx = currentPage * itemsPerPage;
-    const curretPhotos = sortedPhotos.slice(startIdx, startIdx + itemsPerPage);
+    const curretPhotos = photos.slice().sort((a,b)=>new Date(b.date) - new Date(a.date)).slice(startIdx, startIdx + itemsPerPage);
     const totalPages = Math.ceil(photos.length / itemsPerPage);
+
+    // ダミー
+    const placeholders = Array.from({
+        length: itemsPerPage - curretPhotos.length
+    });
 
     return(
         <div className="photo-display-wrapper">
             <div className="photo-grid" style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
                 {curretPhotos.map((photo,index)=>(
-                    <img key={index} src={photo.src} alt={photo.title || "photo"} onClick={()=>setSelectedPhoto(photo)} className="photo-item"/>
+                    <img key={index} src={photo.thumb} alt={photo.title || "photo"} onClick={()=>setSelectedPhoto(photo)} className="photo-item"/>
+                ))}
+
+                {/* ダミー */}
+                {placeholders.map((_, idx)=>(
+                    <div key={`placeholder-${idx}`} className="photo-item empty"></div>
                 ))}
             </div>
 

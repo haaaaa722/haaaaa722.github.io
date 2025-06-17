@@ -6,9 +6,11 @@
 }
 
 .photo-grid{
+    height: 57vh;
     display: grid;
-    gap: 1vw;
+    gap: 1px;
     flex-grow: 1;
+    padding: 1px;
     overflow: hidden;
 }
 
@@ -17,4 +19,8 @@
     height: calc((60vh - 3vh)/3);
     cursor: pointer;
     object-fit: cover;
+}
+
+.empty{
+    color: transparent;
 }

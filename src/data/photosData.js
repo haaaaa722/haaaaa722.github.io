@@ -1,7 +1,8 @@
 const photos = [
     {
         id:1,
-        src:"/images/2022_0403_1714.jpg",
+        src:"/images/fullsize/2022_0403_1714.jpg",
+        thumb:"/images/thumbnail/2022_0403_1714.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/04/03",
@@ -11,7 +12,8 @@ const photos = [
     },
     {
         id:2,
-        src:"/images/2022_0902_1003.jpg",
+        src:"/images/fullsize/2022_0902_1003.jpg",
+        thumb:"/images/thumbnail/2022_0902_1003.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/09/02",
@@ -21,7 +23,8 @@ const photos = [
     },
     {
         id:3,
-        src:"/images/2022_0902_1312.jpg",
+        src:"/images/fullsize/2022_0902_1312.jpg",
+        thumb:"/images/thumbnail/2022_0902_1312.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/09/02",
@@ -31,7 +34,8 @@ const photos = [
     },
     {
         id:4,
-        src:"/images/2022_0902_1541.jpg",
+        src:"/images/fullsize/2022_0902_1541.jpg",
+        thumb:"/images/thumbnail/2022_0902_1541.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/09/02",
@@ -41,7 +45,8 @@ const photos = [
     },
     {
         id:5,
-        src:"/images/2022_0903_1312.jpg",
+        src:"/images/fullsize/2022_0903_1312.jpg",
+        thumb:"/images/thumbnail/2022_0903_1312.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/09/03",
@@ -51,7 +56,8 @@ const photos = [
     },
     {
         id:6,
-        src:"/images/2022_0903_2227.jpg",
+        src:"/images/fullsize/2022_0903_2227.jpg",
+        thumb:"/images/thumbnail/2022_0903_2227.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/09/03",
@@ -61,7 +67,8 @@ const photos = [
     },
     {
         id:7,
-        src:"/images/2022_1030_2033.jpg",
+        src:"/images/fullsize/2022_1030_2033.jpg",
+        thumb:"/images/thumbnail/2022_1030_2033.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2022/10/30",
@@ -71,7 +78,8 @@ const photos = [
     },
     {
         id:8,
-        src:"/images/2023_0101_1025.jpg",
+        src:"/images/fullsize/2023_0101_1025.jpg",
+        thumb:"/images/thumbnail/2023_0101_1025.jpg",
         camera:"Apple iPhone 11",
         lens:"広角カメラ",
         date:"2023/01/01",
@@ -81,7 +89,8 @@ const photos = [
     },
     {
         id:9,
-        src:"/images/2023_0602_1915.jpg",
+        src:"/images/fullsize/2023_0602_1915.jpg",
+        thumb:"/images/thumbnail/2023_0602_1915.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2023/06/02",
@@ -91,7 +100,8 @@ const photos = [
     },
     {
         id:10,
-        src:"/images/2023_1125_1417.jpg",
+        src:"/images/fullsize/2023_1125_1417.jpg",
+        thumb:"/images/thumbnail/2023_1125_1417.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"超広角カメラ",
         date:"2023/11/25",
@@ -101,7 +111,8 @@ const photos = [
     },
     {
         id:11,
-        src:"/images/2023_1125_1601.jpg",
+        src:"/images/fullsize/2023_1125_1601.jpg",
+        thumb:"/images/thumbnail/2023_1125_1601.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2023/11/25",
@@ -111,7 +122,8 @@ const photos = [
     },
     {
         id:12,
-        src:"/images/2024_0214_1351.jpg",
+        src:"/images/fullsize/2024_0214_1351.jpg",
+        thumb:"/images/thumbnail/2024_0214_1351.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/02/14",
@@ -121,7 +133,8 @@ const photos = [
     },
     {
         id:13,
-        src:"/images/2024_0404_1351.jpg",
+        src:"/images/fullsize/2024_0404_1351.jpg",
+        thumb:"/images/thumbnail/2024_0404_1351.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/04/04",
@@ -131,7 +144,8 @@ const photos = [
     },
     {
         id:14,
-        src:"/images/2024_0404_1438.jpg",
+        src:"/images/fullsize/2024_0404_1438.jpg",
+        thumb:"/images/thumbnail/2024_0404_1438.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/04/04",
@@ -141,7 +155,8 @@ const photos = [
     },
     {
         id:15,
-        src:"/images/2024_0405_1316.jpg",
+        src:"/images/fullsize/2024_0405_1316.jpg",
+        thumb:"/images/thumbnail/2024_0405_1316.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/04/05",
@@ -151,7 +166,8 @@ const photos = [
     },
     {
         id:16,
-        src:"/images/2024_0405_1339.jpg",
+        src:"/images/fullsize/2024_0405_1339.jpg",
+        thumb:"/images/thumbnail/2024_0405_1339.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/04/05",
@@ -161,7 +177,8 @@ const photos = [
     },
     {
         id:17,
-        src:"/images/2024_0405_1449.jpg",
+        src:"/images/fullsize/2024_0405_1449.jpg",
+        thumb:"/images/thumbnail/2024_0405_1449.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/04/05",
@@ -171,7 +188,8 @@ const photos = [
     },
     {
         id:18,
-        src:"/images/2024_0919_1736.jpg",
+        src:"/images/fullsize/2024_0919_1736.jpg",
+        thumb:"/images/thumbnail/2024_0919_1736.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/09/19",
@@ -181,7 +199,8 @@ const photos = [
     },
     {
         id:19,
-        src:"/images/2024_0919_1809.jpg",
+        src:"/images/fullsize/2024_0919_1809.jpg",
+        thumb:"/images/thumbnail/2024_0919_1809.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/09/19",
@@ -191,7 +210,8 @@ const photos = [
     },
     {
         id:20,
-        src:"/images/2024_0919_1902.jpg",
+        src:"/images/fullsize/2024_0919_1902.jpg",
+        thumb:"/images/thumbnail/2024_0919_1902.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2024/09/19",
@@ -201,17 +221,19 @@ const photos = [
     },
     {
         id:21,
-        src:"/images/2024_0920_1107.jpg",
+        src:"/images/fullsize/2024_0920_1107.jpg",
+        thumb:"/images/thumbnail/2024_0920_1107.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
-        date:"2024/0920/1107",
+        date:"2024/09/20",
         place:"兵庫県神戸市 スターバックスコーヒー 神戸北野異人館店",
         categories:["Architecture"],
         subcategories:["Historical Building"]
     },
     {
         id:22,
-        src:"/images/2024_0920_1220.jpg",
+        src:"/images/fullsize/2024_0920_1220.jpg",
+        thumb:"/images/thumbnail/2024_0920_1220.jpg",
         camera:"",
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
@@ -221,7 +243,8 @@ const photos = [
     },
     {
         id:23,
-        src:"/images/2024_0920_1300.jpg",
+        src:"/images/fullsize/2024_0920_1300.jpg",
+        thumb:"/images/thumbnail/2024_0920_1300.jpg",
         camera:"",
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
@@ -231,7 +254,8 @@ const photos = [
     },
     {
         id:24,
-        src:"/images/2024_0920_1405.jpg",
+        src:"/images/fullsize/2024_0920_1405.jpg",
+        thumb:"/images/thumbnail/2024_0920_1405.jpg",
         camera:"",
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
@@ -241,7 +265,8 @@ const photos = [
     },
     {
         id:25,
-        src:"/images/2025_0331_1330.jpg",
+        src:"/images/fullsize/2025_0331_1330.jpg",
+        thumb:"/images/thumbnail/2025_0331_1330.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/03/31",
@@ -251,7 +276,8 @@ const photos = [
     },
     {
         id:26,
-        src:"/images/2025_0331_1348.jpg",
+        src:"/images/fullsize/2025_0331_1348.jpg",
+        thumb:"/images/thumbnail/2025_0331_1348.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/03/31",
@@ -261,7 +287,8 @@ const photos = [
     },
     {
         id:27,
-        src:"/images/2025_0408_1056.JPG",
+        src:"/images/fullsize/2025_0408_1056.jpg",
+        thumb:"/images/thumbnail/2025_0408_1056.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2025/04/08",
@@ -271,7 +298,8 @@ const photos = [
     },
     {
         id:28,
-        src:"/images/2025_0408_1714.JPG",
+        src:"/images/fullsize/2025_0408_1714.jpg",
+        thumb:"/images/thumbnail/2025_0408_1714.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/04/08",
@@ -281,7 +309,8 @@ const photos = [
     },
     {
         id:29,
-        src:"/images/2025_0408_1901.JPG",
+        src:"/images/fullsize/2025_0408_1901.jpg",
+        thumb:"/images/thumbnail/2025_0408_1901.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/04/08",
@@ -291,7 +320,8 @@ const photos = [
     },
     {
         id:30,
-        src:"/images/2025_0507_1204.JPG",
+        src:"/images/fullsize/2025_0507_1204.jpg",
+        thumb:"/images/thumbnail/2025_0507_1204.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/05/07",
@@ -301,7 +331,8 @@ const photos = [
     },
     {
         id:31,
-        src:"/images/2025_0507_1232.JPG",
+        src:"/images/fullsize/2025_0507_1232.jpg",
+        thumb:"/images/thumbnail/2025_0507_1232.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/05/07",
