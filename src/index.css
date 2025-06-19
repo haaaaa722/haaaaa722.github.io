@@ -21,4 +21,5 @@ body{
   background-color: light-dark(#f1f1f2,#1e1e20);
   color: light-dark(#1e1e20,#f1f1f2);
   height: 100vh;
+  overflow: hidden;
 }

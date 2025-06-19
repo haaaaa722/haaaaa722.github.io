@@ -6,42 +6,102 @@
     height: 100%;
     background: rgba(0,0,0,0.7);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
     z-index: 1000;
 }
 
-.photo-modal{
-    background: white;
-    padding: 2vh;
-    width: 90vw;
-    height: 90vh;
-    overflow: auto;
-    position: relative;
-    display: flex;
+.photo-modal-content{
+    background: light-dark(#f1f1f2,#1e1e20);
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 8px;
-    box-shadow: 0 0 20px black;
+    position: relative;
 }
 
-.photo-modal img{
-    max-width: 100%;
-    max-height: 70%;
-    display: block;
-    margin: 0 auto;
-    top: 0;
+.photo-modal-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-photo{
+    width: 100%;
+    max-height: 80vh;
     object-fit: contain;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-.photo-info{
-    text-align: left;
+.modal-info{
+    font-size: 2vh;
 }
 
-.close-btn{
+.modal-category-link{
+    text-decoration: none;
+    color: #375e97;
+}
+
+.photo-modal-close{
     position: absolute;
-    bottom: 1vh;
-    right: 1vh;
-    background: transparent;
-    font-size: 2rem;
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+    background: none;
     border: none;
     cursor: pointer;
+    align-items: center;
+}
+
+.modal-close-btn{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.modal-close-btn::before, .modal-close-btn::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 2.5px;
+    background: light-dark(#1e1e20,#f1f1f2);
+    transition: all 0.3s;
+}
+
+.modal-close-btn::before{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.modal-close-btn::after{
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.modal-close-btn:hover::before{
+    background: #375e97;
+    transform: translate(-50%,-50%) rotate(135deg);
+}
+
+.modal-close-btn:hover::after{
+    background: #375e97;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+@media (min-width:1024px){
+    .photo-modal-body{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .modal-photo{
+        width: 70%;
+    }
+
+    .modal-info{
+        width: 30%;
+    }
 }
