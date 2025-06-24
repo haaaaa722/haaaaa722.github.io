@@ -75,7 +75,8 @@ const App = () => {
           <Route path="Profile" element={<Profile />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Photos" element={<Photos />} />
-          <Route path="/Photos/:categoryName" element={<CategoryPage/>} />
+          <Route path="/Photos/:categoryName" element={<CategoryPage />} />
+          <Route path="/Photos/:categoryName/:subcategoryName" element={<CategoryPage />} />
         </Routes>
       </main>
       <Footer toggleMode={toggleMode} mode={mode}/>
