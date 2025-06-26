@@ -15,27 +15,34 @@ const CategoryList = ( {categories} )=>{
             <nav>
                 <p>Category</p>
                 <ul className="category">
-                    {categories.map((item,index)=>(
-                        <li key={index}>
-                            <Link to={`/Photos/${item.category}`} className="category-btn">
-                                {item.category}
-                            </Link>
-                            <button onClick={()=>toggleSubcategories(index)} className="sub-category-toggle">
-                                <span className={`sub-category-toggle-btn ${openIndex === index ? "sub-category-close" : "sub-category-open"}`}></span>
-                            </button>
-                            {openIndex === index && item.subcategory.length > 0 && (
-                                <ul className="sub-category">
-                                    {item.subcategory.map((sub,i)=>(
-                                        <li key={i}>
-                                            <Link to={`/Photos/${item.category}/${sub}`} className="sub-category-btn">
-                                                {sub}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                    {openIndex === null ? (
+                        // カテゴリ一覧を表示
+                        categories.map((item, index)=>(
+                            <li key={index}>
+                                <Link to={`/Photos/${item.category}`} className="category-btn">{item.category}</Link>
+                                <button onClick={()=> toggleSubcategories(index)} className="sub-category-toggle">
+                                    <span className={`sub-category-toggle-btn sub-category-open`}></span>
+                                </button>
+                            </li>
+                        ))
+                    ) : (
+                        // 展開中のカテゴリのみ表示
+                        <li key={openIndex} className="category-item">
+                            <div className="category-header">
+                                <Link to={`/Photos/${categories[openIndex].category}`} className="category-btn">{categories[openIndex].category}</Link>
+                                <button onClick={()=> toggleSubcategories(openIndex)} className="sub-category-toggle">
+                                    <span className={`sub-category-toggle-btn sub-category-close`}></span>
+                                </button>
+                            </div>
+                            <ul className="sub-category">
+                                {categories[openIndex].subcategory.map((sub,i)=>(
+                                    <li key={i}>
+                                        <Link to={`/Photos/${categories[openIndex].category}/${sub}`} className="sub-category-btn">{sub}</Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </li>
-                    ))}
+                    )}
                 </ul>
             </nav>
         </section>
