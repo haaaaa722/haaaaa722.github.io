@@ -15,12 +15,25 @@ const PhotoModal = ({ photo, onClose}) =>{
                         <p>Camera: {photo.camera}</p>
                         <p>Lens: {photo.lens}</p>
                         <p>Place: {photo.place}</p>
-                        <p>Category: {photo.categories?.map((category,index)=>(
-                            <span key={index}>
-                                <Link to={`/Photos/${category}`} className='modal-category-link'>{category}</Link>
-                                {index < photo.categories.length - 1 && ", "}
-                            </span>
-                        ))}</p>
+                        <p>
+                            Category:{" "}
+                            {photo.categories?.map((pair, index)=>(
+                                <span key={index} className='modal-category-pair'>
+                                    <Link to={`/Photos/${pair.category}`} className='modal-category-link'>
+                                        {pair.category}
+                                    </Link>
+                                    {pair.subcategory && (
+                                        <>
+                                            <span className='modal-slash'>/</span>
+                                            <Link to={`/Photos/${pair.category}/${pair.subcategory}`} className='modal-category-link'>
+                                                {pair.subcategory}
+                                            </Link>
+                                        </>
+                                    )}
+                                    {index < photo.categories.length - 1 && <br/>}
+                                </span>
+                            ))}
+                        </p>
                     </div>
                 </div>
             </div>

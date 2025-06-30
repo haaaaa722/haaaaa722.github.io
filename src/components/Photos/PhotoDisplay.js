@@ -24,7 +24,13 @@ const PhotoDisplay = ({ photos })=>{
         <div className="photo-display-wrapper">
             <div className="photo-grid" style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
                 {curretPhotos.map((photo,index)=>(
-                    <img key={index} src={photo.thumb} alt={photo.title || "photo"} onClick={()=>setSelectedPhoto(photo)} className="photo-item"/>
+                    <div className="photo-item" onClick={()=>setSelectedPhoto(photo)}>
+                        <img
+                            key={index}
+                            src={photo.thumb}
+                            alt={photo.title || "photo"}
+                        />
+                    </div>
                 ))}
 
                 {/* ダミー */}

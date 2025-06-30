@@ -7,8 +7,10 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/04/03",
         place:"広島県尾道市 千光寺公園",
-        categories:["Landscape","Flowers"],
-        subcategories:["Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Flowers", subcategory: "Chrry Blossom" }
+        ]
     },
     {
         id:2,
@@ -18,8 +20,10 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/09/02",
         place:"京都府京都市 京都御所",
-        categories:["Landscape","Architecture"],
-        subcategories:["Historical Buildings"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Historical Buildings" }
+        ]
     },
     {
         id:3,
@@ -29,8 +33,10 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/09/02",
         place:"京都府京都市 伏見稲荷大社",
-        categories:["Landscape","Architecture"],
-        subcategories:["Historical Buildings"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Historical Buildings" }
+        ],
     },
     {
         id:4,
@@ -40,8 +46,11 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/09/02",
         place:"京都府京都市 清水寺",
-        categories:["Landscape","Architecture"],
-        subcategories:["Historical Buildings","Shrines&Temples"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Historical Buildings" },
+            { category: "Architecture", subcategory: "Shrines&Temples" }
+        ]
     },
     {
         id:5,
@@ -51,8 +60,11 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/09/03",
         place:"滋賀県大津市 近江神宮",
-        categories:["Landscape","Architecture"],
-        subcategories:["Historical Buildings","Shrines&Temples"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Historical Buildings" },
+            { category: "Architecture", subcategory: "Shrines&Temples" }
+        ]
     },
     {
         id:6,
@@ -62,8 +74,10 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/09/03",
         place:"京都府京都市 鴨川",
-        categories:["Landscape"],
-        subcategories:["Night view","Rivers"]
+        categories:[
+            { category: "Landscape", subcategory: "Night View" },
+            { category: "Landscape", subcategory: "Rivers" }
+        ]
     },
     {
         id:7,
@@ -73,8 +87,10 @@ const photos = [
         lens:"広角カメラ",
         date:"2022/10/30",
         place:"広島県広島市 広島市立大学",
-        categories:["Events"],
-        subcategories:["Fireworks","Festivals"]
+        categories:[
+            { category: "Events", subcategory: "Fireworks" },
+            { category: "Events", subcategory: "Festivals" }
+        ]
     },
     {
         id:8,
@@ -84,8 +100,9 @@ const photos = [
         lens:"広角カメラ",
         date:"2023/01/01",
         place:"静岡県静岡市 三保松原",
-        categories:["Landscape"],
-        subcategories:["Mountains"]
+        categories:[
+            { category: "Landscape", subcategory: "Mountains" }
+        ]
     },
     {
         id:9,
@@ -95,8 +112,9 @@ const photos = [
         lens:"メインカメラ",
         date:"2023/06/02",
         place:"広島県広島市",
-        categories:["Events"],
-        subcategories:["Festivals"]
+        categories:[
+            { category: "Events", subcategory: "Festivals" }
+        ]
     },
     {
         id:10,
@@ -106,8 +124,9 @@ const photos = [
         lens:"超広角カメラ",
         date:"2023/11/25",
         place:"広島県呉市 魔女のランプ",
-        categories:["Interiors"],
-        subcategories:["Cafes"]
+        categories:[
+            { category: "Interiors", subcategory: "Cafes" }
+        ]
     },
     {
         id:11,
@@ -117,8 +136,9 @@ const photos = [
         lens:"メインカメラ",
         date:"2023/11/25",
         place:"広島県呉市 魔女のランプ",
-        categories:["Interiors"],
-        subcategories:["Cafes"]
+        categories:[
+            { category: "Interiors", subcategory: "Cafes" }
+        ]
     },
     {
         id:12,
@@ -128,8 +148,9 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/02/14",
         place:"広島県広島市 Cat Café MOFF",
-        categories:["Animals"],
-        subcategories:["Cats"]
+        categories:[
+            { category: "Animals", subcategory: "Cats" }
+        ]
     },
     {
         id:13,
@@ -139,8 +160,9 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/04/04",
         place:"広島県廿日市市 厳島神社",
-        categories:["Landscape","Architecture"],
-        subcategories:["Sea","Historical Buildings"]
+        categories:[
+            { category: "Landscape", subcategory: "Sea" },
+            { category: "Architecture", subcategory: "Historical Buildings" }]
     },
     {
         id:14,
@@ -150,8 +172,10 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/04/04",
         place:"広島県廿日市市 宮島",
-        categories:["Landscape","Flowers"],
-        subcategories:["Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Flowers", subcategory: "Cherry Blossom" }
+        ]
     },
     {
         id:15,
@@ -161,8 +185,11 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/04/05",
         place:"山口県岩国市 錦帯橋",
-        categories:["Landscape","Arichitecture"],
-        subcategories:["Historical Building","Bridges"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Historical Buildings" },
+            { category: "Architecture", subcategory: "Bridges" }
+        ]
     },
     {
         id:16,
@@ -172,8 +199,12 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/04/05",
         place:"山口県岩国市 錦帯橋",
-        categories:["Landscape","Arichitecture","Flower"],
-        subcategories:["Historical Building","Bridges","Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Bridges" },
+            { category: "Architecture", subcategory: "Historical Buildings" },
+            { category: "Flowers", subcategory: "Cherry Blossom" }
+        ]
     },
     {
         id:17,
@@ -183,8 +214,12 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/04/05",
         place:"山口県岩国市 錦帯橋",
-        categories:["Landscape","Arichitecture","Flower"],
-        subcategories:["Historical Building","Bridges","Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Architecture", subcategory: "Bridges" },
+            { category: "Architecture", subcategory: "Historical Buildings" },
+            { category: "Flowers", subcategory: "Cherry Blossom" }
+        ]
     },
     {
         id:18,
@@ -194,8 +229,11 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/09/19",
         place:"兵庫県神戸市 átoa",
-        categories:["Animals","Attractions"],
-        subcategories:["Marine Life","Fish","Aquariums"]
+        categories:[
+            { category: "Animals", subcategory: "Fish" },
+            { category: "Animals", subcategory: "Marine Life" },
+            { category: "Attractions", subcategory: "Aquariums" }
+        ]
     },
     {
         id:19,
@@ -205,8 +243,9 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/09/19",
         place:"兵庫県神戸市 神戸ポートミュージアム",
-        categories:["Landscape"],
-        subcategories:["Sunset"]
+        categories:[
+            { category: "Landscape", subcategory: "Sunset" }
+        ]
     },
     {
         id:20,
@@ -216,8 +255,10 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/09/19",
         place:"兵庫県神戸市 神戸ポートタワー",
-        categories:["Architecture","Landscape"],
-        subcategories:["Modern Architecture","Night view"]
+        categories:[
+            { category: "Architecture", subcategory: "Modern Architecture" },
+            { category: "Landscape", subcategory: "Night View" }
+        ]
     },
     {
         id:21,
@@ -227,118 +268,135 @@ const photos = [
         lens:"メインカメラ",
         date:"2024/09/20",
         place:"兵庫県神戸市 スターバックスコーヒー 神戸北野異人館店",
-        categories:["Architecture"],
-        subcategories:["Historical Building"]
+        categories:[
+            { category: "Architecture", subcategory: "Historical Buildings" }
+        ]
     },
     {
         id:22,
         src:"/images/fullsize/2024_0920_1220.jpg",
         thumb:"/images/thumbnail/2024_0920_1220.jpg",
-        camera:"",
+        camera:null,
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
         place:"兵庫県神戸市 北野異人館街",
-        categories:["Interiors"],
-        subcategories:["Decor"]
+        categories:[
+            { category: "Interiors", subcategory: "Decor" }
+        ]
     },
     {
         id:23,
         src:"/images/fullsize/2024_0920_1300.jpg",
         thumb:"/images/thumbnail/2024_0920_1300.jpg",
-        camera:"",
+        camera:null,
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
         place:"兵庫県神戸市 北野異人館街",
-        categories:["Interiors"],
-        subcategories:["Decor"]
+        categories:[
+            { category: "Interiors", subcategory: "Decor" }
+        ]
     },
     {
         id:24,
         src:"/images/fullsize/2024_0920_1405.jpg",
         thumb:"/images/thumbnail/2024_0920_1405.jpg",
-        camera:"",
+        camera:null,
         lens:"Canon EF-S18-55mm F3.5-5.6 IS STM",
         date:"2024/09/20",
         place:"兵庫県神戸市 北野異人館街",
-        categories:["interiors"],
-        subcategories:["Architectural Details"]
+        categories:[
+            { category: "Interiors", subcategory: "Architectural Details" }
+        ]
     },
     {
         id:25,
-        src:"/images/fullsize/2025_0331_1330.jpg",
+        src:"/images/fullsize/2025_0331_1330.JPG",
         thumb:"/images/thumbnail/2025_0331_1330.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/03/31",
         place:"長崎県佐世保市 ハウステンボス",
-        categories:["Landscape","Flowers"],
-        subcategories:["Flower Fields","Tulip"]
+        categories:[
+            { category: "Landscape", subcategory: "Flower Fields" },
+            { category: "Flowers", subcategory: "Tulip" }
+        ]
     },
     {
         id:26,
-        src:"/images/fullsize/2025_0331_1348.jpg",
+        src:"/images/fullsize/2025_0331_1348.JPG",
         thumb:"/images/thumbnail/2025_0331_1348.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/03/31",
         place:"長崎県佐世保市 ハウステンボス",
-        categories:["Events"],
-        subcategories:["Installations"]
+        categories:[
+            { category: "Events", subcategory: "Installations" }
+        ]
     },
     {
         id:27,
-        src:"/images/fullsize/2025_0408_1056.jpg",
+        src:"/images/fullsize/2025_0408_1056.JPG",
         thumb:"/images/thumbnail/2025_0408_1056.jpg",
         camera:"Apple iPhone 14 Pro",
         lens:"メインカメラ",
         date:"2025/04/08",
         place:"広島県広島市 広島市立大学",
-        categories:["Landscape","Flowers"],
-        subcategories:["Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: null },
+            { category: "Flowers", subcategory: "Cherry Blossom" }
+        ]
     },
     {
         id:28,
-        src:"/images/fullsize/2025_0408_1714.jpg",
+        src:"/images/fullsize/2025_0408_1714.JPG",
         thumb:"/images/thumbnail/2025_0408_1714.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/04/08",
         place:"広島県廿日市市 宮島",
-        categories:["Landscape","Flower"],
-        subcategories:["Street Scenes","Cherry Blossom"]
+        categories:[
+            { category: "Landscape", subcategory: "Street Scenes" },
+            { category: "Flowers", subcategory: "Cherry Blossom" }
+        ]
     },
     {
         id:29,
-        src:"/images/fullsize/2025_0408_1901.jpg",
+        src:"/images/fullsize/2025_0408_1901.JPG",
         thumb:"/images/thumbnail/2025_0408_1901.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/04/08",
         place:"広島県廿日市市 宮島",
-        categories:["Landscape","Architecture"],
-        subcategories:["Sunset","Sea","Historical Buildings"]
+        categories:[
+            { category: "Landscape", subcategory: "Sea" },
+            { category: "Landscape", subcategory: "Sunset" },
+            { category: "Architecture", subcategory: "Historical Buildings" }
+        ]
     },
     {
         id:30,
-        src:"/images/fullsize/2025_0507_1204.jpg",
+        src:"/images/fullsize/2025_0507_1204.JPG",
         thumb:"/images/thumbnail/2025_0507_1204.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/05/07",
         place:"広島県広島市 広島市植物公園",
-        categories:["Animals"],
-        subcategories:["Fish"]
+        categories:[
+            { category: "Animals", subcategory: "Fish" }
+        ]
     },
     {
         id:31,
-        src:"/images/fullsize/2025_0507_1232.jpg",
+        src:"/images/fullsize/2025_0507_1232.JPG",
         thumb:"/images/thumbnail/2025_0507_1232.jpg",
         camera:"Nikon Z50II",
         lens:"NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
         date:"2025/05/07",
         place:"広島県広島市 広島市植物公園",
-        categories:["Landscape","Flower"],
-        subcategories:["Flower Fields","Nemophila"]
+        categories:[
+            { category: "Landscape", subcategory: "Flower Fields" },
+            { category: "Flowers", subcategory: "Nemophila" }
+        ]
     }
 ];
 
