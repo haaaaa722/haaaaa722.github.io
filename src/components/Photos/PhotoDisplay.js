@@ -17,12 +17,12 @@ const PhotoDisplay = ({ photos })=>{
 
     // ダミー
     const placeholders = Array.from({
-        length: itemsPerPage - curretPhotos.length
+        length: Math.max(itemsPerPage - curretPhotos.length, 0)
     });
 
     return(
         <div className="photo-display-wrapper">
-            <div className="photo-grid" style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
+            <div className="photo-grid" style={{gridTemplateColumns:`repeat(${columns},1fr)`,gridTemplateRows:`repeat(${rows},1fr)`}}>
                 {curretPhotos.map((photo,index)=>(
                     <div className="photo-item" onClick={()=>setSelectedPhoto(photo)}>
                         <img

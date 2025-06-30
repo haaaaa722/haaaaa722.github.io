@@ -36,11 +36,14 @@ const categories = [
     }
 ];
 const CategoryPage = ()=>{
-    const {categoryName,subcategoryName} = useParams();
-    const filteredPhotos = photosData.filter(photo =>{
-        const matchCategory = photo.categories.includes(categoryName);
-        const matchSub = subcategoryName ? photo.subcategories.includes(subcategoryName) : true;
-        return matchCategory && matchSub;   
+    const { categoryName, subcategoryName} = useParams();
+
+    const filteredPhotos = photosData.filter((photo)=>{
+        return photo.categories.some((pair)=>{
+            const matchCategory = pair.category === categoryName;
+            const macchSubcategory = !subcategoryName || pair.subcategory === subcategoryName;
+            return matchCategory && macchSubcategory;
+        });
     });
 
     return(
