@@ -1,16 +1,6 @@
 header{
     position: relative;
     display: flex;
-    height: 8vh;
+    height: 5vh;
     width: 100%;
-    background-color: light-dark(#f1f1f2,#1e1e20);
-    border-bottom: 1px solid light-dark(#1e1e20,#f1f1f2);
-}
-
-.title{
-    text-decoration: none;
-    color: light-dark(#1e1e20,#f1f1f2);
-    font-size: 6vh;
-    line-height: 8vh;
-    padding: 0 1vw;
 }

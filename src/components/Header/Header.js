@@ -5,7 +5,7 @@ import NavMobile from './NavMobile';
 import NavTablet from './NavTablet';
 import NavDesktop from './NavDesktop';
 
-const Header = ()=>{
+const Header = ({ toggleMode, mode })=>{
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
 
     useEffect(()=>{
@@ -18,17 +18,16 @@ const Header = ()=>{
 
     const renderNav = ()=> {
         if(windowWidth < 768){
-            return<NavMobile/>;
+            return<NavMobile toggleMode={toggleMode} mode={mode}/>;
         }else if(windowWidth >= 768 && windowWidth < 1024){
-            return <NavTablet/>;
+            return <NavTablet toggleMode={toggleMode} mode={mode}/>;
         }else{
-            return <NavDesktop/>;
+            return <NavDesktop toggleMode={toggleMode} mode={mode}/>;
         }
     };
 
     return(
         <header>
-            <Link to="/" className='title'>はっ！</Link>
             {renderNav()}
         </header>
     );

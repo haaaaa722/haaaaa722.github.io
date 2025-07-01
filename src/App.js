@@ -68,10 +68,10 @@ const App = () => {
   return (
     <>
       <LoadingBar color="#375e97" ref={LodaingBarRef} height={4} shadow={true} />
-      <Header />
+      <Header toggleMode={toggleMode} mode={mode}/>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="Profile" element={<Profile />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Photos" element={<Photos />} />
@@ -79,7 +79,7 @@ const App = () => {
           <Route path="/Photos/:categoryName/:subcategoryName" element={<CategoryPage />} />
         </Routes>
       </main>
-      <Footer toggleMode={toggleMode} mode={mode}/>
+      <Footer/>
     </>
   );
 };

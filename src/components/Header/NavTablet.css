@@ -1,13 +1,13 @@
-.desktop-menu-overlay{
+.tablet-menu-overlay{
     position: relative;
 }
 
-.desktop-menu-items{
+.tablet-menu-items{
     position: fixed;
     display: flex;
-    line-height: 4vh;
     list-style: none;
     font-size: 3vh;
+    line-height: 4vh;
     border: solid 1px light-dark(#1e1e20,#f1f1f2);
     border-radius: 1vh;
     padding: 0 1vw;
@@ -18,32 +18,31 @@
     z-index: 10;
 }
 
-.desktop-menu-items li{
+.tablet-menu-items li{
     transition: all 0.5s;
 }
 
-.desktop-menu-items li a{
+.tablet-menu-items li a{
     display: flex;
     align-items: center;
     gap: 0.5vw;
-    text-decoration: none;
     color: light-dark(#1e1e20,#f1f1f2);
+    text-decoration: none;
     padding: 0 1vw;
 }
 
-.desktop-menu-items li a:hover{
+.tablet-menu-items li a:hover{
     color: #375e97;
 }
 
-.desktop-items-icon{
-    margin-right: 1vw;
+.tablet-items-icon{
+    color: inherit;
     height: 1em;
     width: 1em;
-    color: inherit;
 }
 
 /* モード切替 */
-.desktop-mode{
+.tablet-mode{
     position: fixed;
     right: 0;
     margin: 1vh;
@@ -55,12 +54,12 @@
     box-shadow: 1px 1px 1px 1px light-dark(gray,black) inset;
 }
 
-.desktop-mode.light{
+.tablet-mode.light{
     transition: all 0.3s ease;
     background-color: #bbc3c6;
 }
 
-.desktop-mode.light svg{
+.tablet-mode.light svg{
     width: 2.5vh;
     height: 2.5vh;
     margin-top: 10%;
@@ -68,7 +67,7 @@
     transition: all 0.3s;
 }
 
-.desktop-mode::before{
+.tablet-mode::before{
     content: "";
     display: block;
     position: absolute;
@@ -82,17 +81,17 @@
     z-index: 1;
 }
 
-.desktop-mode.dark{
+.tablet-mode.dark{
     transition: all 0.3s ease;
     background: #2a3132;
 }
 
-.desktop-mode.dark::before{
+.tablet-mode.dark::before{
     margin-left: 50%;
     background: #b7b8b6;
 }
 
-.desktop-mode.dark svg{
+.tablet-mode.dark svg{
     width: 2.5vh;
     height: 2.5vh;
     margin-top: 10%;
