@@ -10,7 +10,7 @@
     font-size: 3vh;
     border: solid 1px light-dark(#1e1e20,#f1f1f2);
     border-radius: 1vh;
-    padding: 0 1vw;
+    padding: 0.5vh 1vw;
     margin: 1vh;
     background: light-dark(#f1f1f2,#1e1e20);
     left: 50%;
@@ -42,17 +42,32 @@
     color: inherit;
 }
 
+.desktop-menu-items .Active a{
+    color: light-dark(#f1f1f2,#1e1e20);
+}
+
+.active-bg{
+    position: absolute;
+    height: 4vh;
+    background-color: light-dark(#1e1e20,#f1f1f2);
+    border-radius: 1vh;
+    top: 0.5vh;
+    left: 0;
+    transition: left 0.3s;
+    z-index: -1;
+    will-change: left;
+}
+
 /* モード切替 */
 .desktop-mode{
-    position: fixed;
-    right: 0;
-    margin: 1vh;
+    position: relative;
     cursor: pointer;
     width: 8vh;
     height: 4vh;
     border-radius: 2vh;
     border: none;
     box-shadow: 1px 1px 1px 1px light-dark(gray,black) inset;
+    margin-left: 1vw;
 }
 
 .desktop-mode.light{
