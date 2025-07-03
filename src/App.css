@@ -1,7 +1,8 @@
 /* mobile first */
 /* all */
 main{
-    height: 90vh;
+    height: 90svh;
+    max-height: 90vh;
 }
 
 /* tablet */
