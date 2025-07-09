@@ -5,13 +5,13 @@
 .desktop-menu-items{
     position: fixed;
     display: flex;
-    line-height: 4vh;
+    line-height: 3vh;
     list-style: none;
-    font-size: 3vh;
+    font-size: 2.5vh;
     border: solid 1px light-dark(#1e1e20,#f1f1f2);
     border-radius: 1vh;
-    padding: 0.5vh 1vw;
-    margin: 1vh;
+    padding: 0.25vh 0.5vw;
+    margin: 0.5vh 0;
     background: light-dark(#f1f1f2,#1e1e20);
     left: 50%;
     transform: translateX(-50%);
@@ -28,7 +28,7 @@
     gap: 0.5vw;
     text-decoration: none;
     color: light-dark(#1e1e20,#f1f1f2);
-    padding: 0 1vw;
+    padding: 0 0.5vw;
 }
 
 .desktop-menu-items li a:hover{
@@ -36,7 +36,7 @@
 }
 
 .desktop-items-icon{
-    margin-right: 1vw;
+    margin-right: 0/5vw;
     height: 1em;
     width: 1em;
     color: inherit;
@@ -46,12 +46,12 @@
     color: light-dark(#f1f1f2,#1e1e20);
 }
 
-.active-bg{
+.desktop-active-bg{
     position: absolute;
-    height: 4vh;
+    height: 3vh;
     background-color: light-dark(#1e1e20,#f1f1f2);
-    border-radius: 1vh;
-    top: 0.5vh;
+    border-radius: 5px;
+    top: 0.3vh;
     left: 0;
     transition: left 0.3s;
     z-index: -1;
@@ -62,12 +62,14 @@
 .desktop-mode{
     position: relative;
     cursor: pointer;
-    width: 8vh;
-    height: 4vh;
-    border-radius: 2vh;
+    width: 6vh;
+    height: 3vh;
+    border-radius: 1.5vh;
     border: none;
     box-shadow: 1px 1px 1px 1px light-dark(gray,black) inset;
-    margin-left: 1vw;
+    margin-left: 0.5vw;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .desktop-mode.light{
@@ -76,8 +78,8 @@
 }
 
 .desktop-mode.light svg{
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 2vh;
+    height: 2vh;
     margin-top: 10%;
     margin-left: 45%;
     transition: all 0.3s;
@@ -87,11 +89,11 @@
     content: "";
     display: block;
     position: absolute;
-    width: 3vh;
-    height: 3vh;
+    width: 2.5vh;
+    height: 2.5vh;
     background: #f9f9ff;
     border-radius: 50%;
-    top: 15%;
+    top: 10%;
     left: 7%;
     transition: all 0.3s ease;
     z-index: 1;
@@ -108,8 +110,8 @@
 }
 
 .desktop-mode.dark svg{
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 2vh;
+    height: 2vh;
     margin-top: 10%;
     margin-right: 45%;
     transition: all 0.3s;

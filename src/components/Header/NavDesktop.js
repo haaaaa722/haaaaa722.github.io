@@ -40,7 +40,7 @@ const NavDesktop = ({ toggleMode, mode})=>{
         <nav className='nav-desktop'>
             <div className="desktop-menu-overlay">
                 <ul className="desktop-menu-items" ref={menuRef}>
-                    <div className="active-bg" style={activeBgStyle}></div>
+                    <div className="desktop-active-bg" style={activeBgStyle}></div>
 
                     <li className={isActive("/Home") ? "Active" : ""}><Link to="/Home"><FontAwesomeIcon icon={faHouse} className="desktop-items-icon"/>Home</Link></li>
                     <li className={isActive("/Profile") ? "Active" : ""}><Link to="/Profile"><FontAwesomeIcon icon={faUser} className="desktop-items-icon"/>Profile</Link></li>

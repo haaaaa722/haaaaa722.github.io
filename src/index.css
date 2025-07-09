@@ -24,3 +24,7 @@ body{
   max-height: 100svh;
   overflow: hidden;
 }
+
+a{
+  text-decoration: none;
+}

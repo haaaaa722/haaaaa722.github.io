@@ -40,7 +40,7 @@ const NavTablet = ({ toggleMode, mode })=>{
         <nav className='nav-tablet'>
             <div className="tablet-menu-overlay">
                 <ul className="tablet-menu-items" ref={menuRef}>
-                    <div className="active-bg" style={activeBgStyle}></div>
+                    <div className="tablet-active-bg" style={activeBgStyle}></div>
 
                     <li className={isActive(`/Home`) ? "Active" : ""}><Link to="/Home"><FontAwesomeIcon icon={faHouse} className="tablet-items-icon"/>Home</Link></li>
                     <li className={isActive("/Profile") ? "Active" : ""}><Link to="/Profile"><FontAwesomeIcon icon={faUser} className="tablet-items-icon"/>Profile</Link></li>

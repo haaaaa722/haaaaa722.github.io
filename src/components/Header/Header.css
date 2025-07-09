@@ -1,6 +1,11 @@
 header{
     position: relative;
     display: flex;
-    height: 5svh;
     width: 100%;
+}
+
+@media (min-width:768px) {
+    header{
+        height: 5svh;
+    }
 }

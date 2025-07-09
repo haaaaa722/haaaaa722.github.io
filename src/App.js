@@ -10,6 +10,30 @@ import Works from "./pages/Works";
 import Photos from "./pages/Photos/Photos";
 import CategoryPage from "./pages/Photos/CategoryPage";
 
+const PageTitleUpdater = ()=>{
+  const location = useLocation();
+
+  useEffect(()=>{
+    const path = location.pathname;
+    if(path.startsWith("/Photos/")){
+      const segments = path.split("/");
+      const category = decodeURIComponent(segments[2] || "");
+      const subcategory = decodeURIComponent(segments[3] || "");
+      document.title = `${subcategory ? `${subcategory} / ` : ""}${category} | Photos | はっ！`;
+    }else{
+      const titles = {
+        "/Home" : "はっ！",
+        "/Profile" : "Profile | はっ！",
+        "/Works" : "Works | はっ！",
+        "/Photos" : "Photos | はっ！"
+      };
+      document.title = titles[path]  || "はっ！";
+    }
+  },[location]);
+
+  return null;
+};
+
 const App = () => {
   const LodaingBarRef = useRef(null);
   const location = useLocation();
@@ -67,6 +91,7 @@ const App = () => {
 
   return (
     <>
+      <PageTitleUpdater />
       <LoadingBar color="#375e97" ref={LodaingBarRef} height={4} shadow={true} />
       <Header toggleMode={toggleMode} mode={mode}/>
       <main>

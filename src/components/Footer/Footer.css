@@ -1,26 +1,30 @@
 footer{
     position: fixed;
     display: flex;
-    height: 5svh;
-    max-height: 5vh;
-    width: 100%;
-    background: light-dark(#f1f1f2,#1e1e20);
-    border-top: 1px solid light-dark(#1e1e20,#f1f1f2);
-    align-items: center;
 }
 
 .footer-link-wrapper{
     position: fixed;
-    left: 1vw;
+    right: 1vw;
+    bottom: 0.5vh;
+    z-index: 10;
 }
 
 .footer-link{
     display: flex;
     list-style: none;
+    gap: 0.5vw;
+    right: 0.5vw;
+}
+
+.footer-link li{
+    padding: 0.25vh;
+    border: solid 1px light-dark(#1e1e20,#f1f1f2);
+    border-radius: 50%;
+    background-color: light-dark(#1e1e20,#f1f1f2);
 }
 
 .footer-links-icon{
     font-size: 3vh;
-    color: light-dark(#1e1e20,#f1f1f2);
-    padding: 1vh;
+    color: light-dark(#f1f1f2,#1e1e20);
 }

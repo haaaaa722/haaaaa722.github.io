@@ -1,0 +1,47 @@
+.Profile{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-wrapper{
+    position: relative;
+    border: solid 1px gray;
+    width: 48%;
+    padding: 0 3vw;
+    margin: 0 1%;
+}
+
+.profile-title{
+    font-size: 4vh;
+    padding-bottom: 1vh;
+    cursor: pointer;
+}
+
+.profile-wrapper h2{
+    padding-bottom: 1vh;
+}
+
+.profile-wrapper a{
+    color: light-dark(#1e1e20,#f1f1f2);
+}
+
+.profile-image-wrapper{
+    position: relative;
+    width: 48%;
+    border: solid 1px lightgray;
+    padding: 0 3vw;
+    margin: 0 1%;
+}
+
+.profile-image{
+    width: 100%;
+    border-radius: 50%;
+    padding-top: 1vh;
+}
+
+.contact-wrapper{
+    border: solid 1px grey;
+    width: 98%;
+    margin: 1% 1%;
+    padding: 0 3vw;
+}

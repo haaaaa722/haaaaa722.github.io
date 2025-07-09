@@ -1,12 +1,16 @@
 /* mobile first */
 /* all */
 main{
-    height: 90svh;
-    max-height: 90vh;
+    height: 100svh;
+    max-height: 100vh;
 }
 
 /* tablet */
 @media (min-width:768px){
+    main{
+        height: 95svh;
+        max-height: 95vh;
+    }
 }
 
 /* pc */
