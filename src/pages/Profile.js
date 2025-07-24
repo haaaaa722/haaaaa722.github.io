@@ -36,14 +36,17 @@ const Profile = ()=>{
                 <h1>Links</h1>
 
                 <div className="profile-links">
-                    <div>
+                    <div className="link-wrapper">
                         <a href="https://x.com/haaaaa722" target="_blank" rel="noopener noreferrer"><img src={xIcon} alt="X Icon" className="profile-link-icon"/></a>
+                        <p>X(Twitter)</p>
                     </div>
-                    <div>
+                    <div className="link-wrapper">
                         <a href="https://www.instagram.com/pics._.hyt" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram Icon" className="profile-link-icon"/></a>
+                        <p>Instagram</p>
                     </div>
-                    <div>
+                    <div className="link-wrapper">
                         <a href="https://github.com/haaaaa722" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="GitHub Icon" className="profile-link-icon"/></a>
+                        <p>GitHub</p>
                     </div>
                 </div>
             </div>
