@@ -96,8 +96,9 @@ const App = () => {
       <Header toggleMode={toggleMode} mode={mode}/>
       <main>
         <Routes>
+          <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<Home />} />
-          <Route path="Profile" element={<Profile />} />
+          <Route path="/Profile" element={<Profile />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Photos" element={<Photos />} />
           <Route path="/Photos/:categoryName" element={<CategoryPage />} />

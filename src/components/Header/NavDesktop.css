@@ -42,7 +42,7 @@
     color: inherit;
 }
 
-.desktop-menu-items .Active a{
+.desktop-menu-items a.Active{
     color: light-dark(#f1f1f2,#1e1e20);
 }
 

@@ -41,7 +41,7 @@
     width: 1em;
 }
 
-.tablet-menu-items .Active a{
+.tablet-menu-items a.Active{
     color: light-dark(#f1f1f2,#1e1e20);
 }
 

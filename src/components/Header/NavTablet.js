@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { faHouse, faUser, faLayerGroup, faCamera } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactComponent as SunIcon} from "../../assets/icons/sun.svg";
@@ -12,40 +12,52 @@ const NavTablet = ({ toggleMode, mode })=>{
     const menuRef = useRef(null);
     const [bgPos, setBgPos] = useState({left:0,width:0});
 
-    const isActive = (path)=>location.pathname.startsWith(path);
-
-    useEffect(()=>{
+    // 背景位置更新
+    const updateActiveBg = ()=>{
         if(!menuRef.current) return;
-
-        const ul = menuRef.current;
-        const activeItem = ul.querySelector(".Active");
-
-        if(activeItem){
-            const rect = activeItem.getBoundingClientRect();
-            const containerRect = ul.getBoundingClientRect();
-
+        const activeLink = menuRef.current.querySelector("a.Active");
+        if(activeLink){
+            const rect = activeLink.getBoundingClientRect();
+            const containerRect = menuRef.current.getBoundingClientRect();
             setBgPos({
                 left: rect.left - containerRect.left,
                 width: rect.width,
             });
         }
-    },[location.pathname]);
-
-    const activeBgStyle = {
-        left: `${bgPos.left}px`,
-        width: `${bgPos.width}px`,
     };
+
+    useEffect(()=>{
+        updateActiveBg();
+        window.addEventListener("resize",updateActiveBg);
+        return ()=> window.removeEventListener("resize",updateActiveBg);
+    },[location.pathname]);
 
     return(
         <nav className='nav-tablet'>
             <div className="tablet-menu-overlay">
                 <ul className="tablet-menu-items" ref={menuRef}>
-                    <div className="tablet-active-bg" style={activeBgStyle}></div>
+                    <div className="tablet-active-bg" style={{left: `${bgPos.left}px`, width: `${bgPos.width}px`}}></div>
 
-                    <li className={isActive(`/Home`) ? "Active" : ""}><Link to="/Home"><FontAwesomeIcon icon={faHouse} className="tablet-items-icon"/>Home</Link></li>
-                    <li className={isActive("/Profile") ? "Active" : ""}><Link to="/Profile"><FontAwesomeIcon icon={faUser} className="tablet-items-icon"/>Profile</Link></li>
-                    <li className={isActive("/Works") ? "Active" : ""}><Link to="/Works"><FontAwesomeIcon icon={faLayerGroup} className="tablet-items-icon"/>Works</Link></li>
-                    <li className={isActive("/Photos") ? "Active" : ""}><Link to="/Photos"><FontAwesomeIcon icon={faCamera} className="tablet-items-icon"/>Photos</Link></li>
+                    <li>
+                        <NavLink to="/" className={({ isActive })=>(isActive ? "Active":"")} end>
+                            <FontAwesomeIcon icon={faHouse} className="tablet-items-icon" />Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Profile" className={({ isActive })=>(isActive ? "Active":"")}>
+                            <FontAwesomeIcon icon={faUser} className="tablet-items-icon" />Profile
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Works" className={({ isActive })=>(isActive ? "Active":"")}>
+                            <FontAwesomeIcon icon={faLayerGroup} className="tablet-items-icon" />Works
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Photos" className={({ isActive })=>(isActive ? "Active":"")}>
+                            <FontAwesomeIcon icon={faCamera} className="tablet-items-icon" />Photos
+                        </NavLink>
+                    </li>
                     <li>
                         <button onClick={toggleMode} className={`tablet-mode ${mode === "light" ? "light":"dark"}`}>
                         {mode === "light" ? <SunIcon/> : <MoonIcon/>}
