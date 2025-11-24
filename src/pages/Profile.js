@@ -53,7 +53,7 @@ const Profile = ()=>{
 
             <div className="contact-wrapper">
                 <h1>Contact</h1>
-                <p>お問い合わせは、下記の各種SNSのDMにお願いします</p>
+                <p>お問い合わせは、各種SNSのDMにお願いします</p>
             </div>
         </div>
     );
