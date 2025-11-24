@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { faHouse, faUser, faLayerGroup, faCamera } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,10 +26,19 @@ const NavDesktop = ({ toggleMode, mode})=>{
         }
     };
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         updateActiveBg();
+
+        const timer = setTimeout(()=>{
+            updateActiveBg();
+        },100);
+
         window.addEventListener("resize",updateActiveBg);
-        return ()=> window.removeEventListener("resize",updateActiveBg);
+
+        return ()=>{
+            window.removeEventListener("resize",updateActiveBg);
+            clearTimeout(timer);
+        };
     },[location.pathname]);
 
     return(
