@@ -1,6 +1,6 @@
 import CategoryList from "../../components/Photos/CategoryList";
 import PhotoDisplay from "../../components/Photos/PhotoDisplay";
-import photosData from "../../data/photosData"
+import photosData from "./photosData"
 import "./Photos.css";
 
 const categories = [

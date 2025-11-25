@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import photosData from "../../data/photosData";
+import photosData from "./photosData";
 import PhotoDisplay from "../../components/Photos/PhotoDisplay";
 import "./CategoryPage.css";
 import CategoryList from "../../components/Photos/CategoryList";

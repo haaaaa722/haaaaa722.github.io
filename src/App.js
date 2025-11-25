@@ -4,9 +4,15 @@ import LoadingBar from "react-top-loading-bar";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+// Home
 import Home from "./pages/Home";
+// Profile
 import Profile from "./pages/Profile"
-import Works from "./pages/Works";
+// Works
+import Works from "./pages/Works/Works";
+import WorkDispatcher from "./pages/Works/WorkDispatcher";
+import Portfolio from "./pages/Works/Portfolio";
+// Photos
 import Photos from "./pages/Photos/Photos";
 import CategoryPage from "./pages/Photos/CategoryPage";
 
@@ -100,6 +106,8 @@ const App = () => {
           <Route path="/Home" element={<Home />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Works" element={<Works />} />
+          <Route path="/Works/:workId" element={<WorkDispatcher />} />
+          <Route path="/Works/Portfolio" element={<Portfolio />} />
           <Route path="/Photos" element={<Photos />} />
           <Route path="/Photos/:categoryName" element={<CategoryPage />} />
           <Route path="/Photos/:categoryName/:subcategoryName" element={<CategoryPage />} />
