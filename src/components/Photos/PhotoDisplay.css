@@ -1,14 +1,14 @@
 .photo-display-wrapper{
-    height: 65svh;
-    max-height: 65vh;
+    height: 68svh;
+    max-height: 68vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .photo-grid{
-    height: 62svh;
-    max-height: 62vh;
+    height: 65svh;
+    max-height: 65vh;
     display: grid;
     gap: 1px;
     flex-grow: 1;

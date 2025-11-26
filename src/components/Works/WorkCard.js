@@ -11,7 +11,7 @@ const WorkCard = ({ work })=>{
                 </div>
                 <div className="work-info">
                     <h2>{work.title}</h2>
-                    <span className="work^category">{work.category}</span>
+                    <span className="work-category">{work.category}</span>
                 </div>
             </Link>
         </div>
