@@ -1,7 +1,21 @@
+.works-filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.works-filter h2{
+    text-decoration: none;
+}
+
 .filter-buttons{
     display:flex;
-    border: 1px solid green;
     flex-direction: column;
+    padding: 1vw;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-right: 10vw;
+    gap: 0.5vh
 }
 
 .filter-button{

@@ -9,5 +9,11 @@
     height: 20svh;
     max-height: 20vh;
     display: flex;
-    border: 1px solid cornflowerblue
+    justify-content: space-between;
+    padding: 0 1vw;
+    align-items: center;
+}
+
+.works-nav h1{
+    margin-left: 10vw
 }

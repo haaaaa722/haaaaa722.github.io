@@ -2,10 +2,8 @@ import React from "react";
 import WorkCard from "./WorkCard";
 import "./WorksGrid.css";
 
-const WorksGrid = ({ works }) => {
-    const MAX_ITEMS = 9;
-
-    const emptyCount = Math.max(0, MAX_ITEMS - works.length);
+const WorksGrid = ({ works,  maxItems }) => {
+    const emptyCount = Math.max(0, maxItems - works.length);
 
     const emptySlots = Array(emptyCount).fill(null);
     return(

@@ -4,7 +4,7 @@ import "./Home.css"
 const Home = ()=>{
     return(
         <div className='Home'>
-
+            <h1>Welcome to my portfolio!</h1>
         </div>
     );
 };

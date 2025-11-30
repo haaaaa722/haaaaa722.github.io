@@ -13,7 +13,22 @@ const Works = () => {
 
     const [currentPage, setCurrentPage] = useState(0);
 
-    const ITEMS_PER_PAGE = 9;
+    const [itemsPerPage, setItemsPerPage] = useState(9);
+
+    useEffect(()=>{
+        const handleResize = ()=>{
+            if(window.innerWidth <= 768){
+                setItemsPerPage(6);
+            }else{
+                setItemsPerPage(9);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return ()=> window.removeEventListener("resize", handleResize);
+    },[]);
 
     const getCategoryFromPath = ()=>{
         const path = location.pathname;
@@ -30,10 +45,10 @@ const Works = () => {
         ? worksData
         : worksData.filter((work) => work.category === selectedCategory);
 
-    const totalPages = Math.ceil(filteredWorks.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(filteredWorks.length / itemsPerPage);
 
-    const startIndex = currentPage * ITEMS_PER_PAGE;
-    const displayItems = filteredWorks.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const startIndex = currentPage * itemsPerPage;
+    const displayItems = filteredWorks.slice(startIndex, startIndex + itemsPerPage);
 
     const handlePageChanege = (pageNumber)=>{
         setCurrentPage(pageNumber);
@@ -53,6 +68,7 @@ const Works = () => {
 
             <WorksGrid
                 works={displayItems}
+                maxItems={itemsPerPage}
             />
 
             <Pagination
